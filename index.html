@@ -2,77 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splitter Tip Calculator</title>
   <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | Tip calculator app</title>
- 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 </head>
 <body>
+
+  <header>
+    <img src="./images/logo.svg" alt="SPLITTER" class="logo">
+  </header>
+
   <main class="card">
+    
     <section class="input-section">
-   <div class="input-group">
-      <label for="bill">Bill</label>
-      <div class="input-wrapper">
-        <img src="./images/icon-dollar.svg" alt="icon-dollar" class="icon">
-        <input type="number" id="bill" placeholder="0" min="0">
+      
+      <div class="input-group">
+        <label for="bill">Bill</label>
+        <div class="input-wrapper">
+          <img src="./images/icon-dollar.svg" alt="" class="input-icon">
+          <input type="number" id="bill" placeholder="0" class="input-field">
+        </div>
       </div>
-    </div>
 
-    <div class="tip-selection">
-      <label>Select Tip %</label>
-      <div class="tip-grid">
-        <button class="tip-btn" value="0.05">5%</button>
-        <button class="tip-btn" value="0.10">10%</button>
-        <button class="tip-btn" value="0.15">15%</button>
-        <button class="tip-btn" value="0.25">25%</button>
-        <button class="tip-btn" value="0.50">50%</button>
-        <input type="number" id="custom-tip" placeholder="Custom">
+      <div class="input-group">
+        <label>Select Tip %</label>
+        <div class="tip-grid">
+          <button class="tip-btn" value="5">5%</button>
+          <button class="tip-btn" value="10">10%</button>
+          <button class="tip-btn active" value="15">15%</button>
+          <button class="tip-btn" value="25">25%</button>
+          <button class="tip-btn" value="50">50%</button>
+          <input type="number" id="custom-tip" placeholder="Custom" class="input-field custom-field">
+        </div>
       </div>
-    </div>
 
-    <div class="input-group">
-      <div class="label-wrapper">
-        <label for="people">Number of People</label>
-        <span id="error-msg" class="error hidden">Can't be zero</span>
+      <div class="input-group">
+        <div class="label-row">
+          <label for="people">Number of People</label>
+          <span id="error-msg" class="error-msg hidden">Can't be zero</span>
+        </div>
+        <div class="input-wrapper">
+          <img src="./images/icon-person.svg" alt="" class="input-icon">
+          <input type="number" id="people" placeholder="0" class="input-field">
+        </div>
       </div>
-      <div class="input-wrapper">
-        <img src="./images/icon-person.svg" alt="" class="icon">
-        <input type="number" id="people" placeholder="0" min="1">
-      </div>
-    </div>
+
     </section>
 
     <section class="output-section">
-      <div class="result-row">
-      <div class="text">
-        <p class="label">Tip Amount</p>
-        <p class="sub-label">/ person</p>
-      </div>
-      <div class="amount" id="tip-amount">$0.00</div>
-    </div>
+      <div class="results-container">
+        
+        <div class="result-row">
+          <div class="text-group">
+            <p class="label">Tip Amount</p>
+            <p class="sub-label">/ person</p>
+          </div>
+          <div class="amount" id="tip-amount">$0.00</div>
+        </div>
 
-    <div class="result-row">
-      <div class="text">
-        <p class="label">Total</p>
-        <p class="sub-label">/ person</p>
-      </div>
-      <div class="amount" id="total-amount">$0.00</div>
-    </div>
+        <div class="result-row">
+          <div class="text-group">
+            <p class="label">Total</p>
+            <p class="sub-label">/ person</p>
+          </div>
+          <div class="amount" id="total-amount">$0.00</div>
+        </div>
 
-    <button id="reset-btn" disabled>RESET</button>
+      </div>
+
+      <button id="reset-btn" class="reset-btn " >RESET</button>
     </section>
 
   </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Babacar Thiam</a>.
-  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
